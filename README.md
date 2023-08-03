@@ -8,4 +8,4 @@ This hack is based on the repository https://github.com/wayou/t-rex-runner/blob/
 Simple: copy the content of hack.js and paste into the dev console of chrome (or similar that has the game) and hit enter. Just start the game and let the magic begins.
 
 # How it works
-The idea is to expand collision area and create a pre collision flow to insert a jump using the same method that check collision in the game (function checkForCollision, that is exposed and easily override.
+The idea is to expand collision area and create a pre collision flow to insert a jump using the same method that check collision in the game (function checkForCollision, that is exposed and easily override).
