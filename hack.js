@@ -42,7 +42,7 @@ function checkForCollision(obstacle, tRex, opt_canvasCtx) {
         obstacle.typeConfig.width * obstacle.size - 2,
         obstacle.typeConfig.height - 2);
 
-    var _checkColision = function (tRexBox, obstacleBox, isPreCollision) {
+    var _checkCollision = function (tRexBox, obstacleBox, isPreCollision) {
         if (boxCompare(tRexBox, obstacleBox)) {
             var collisionBoxes = obstacle.collisionBoxes;
             var tRexCollisionBoxes = tRex.ducking ? Trex.collisionBoxes.DUCKING : Trex.collisionBoxes.RUNNING;
@@ -63,9 +63,9 @@ function checkForCollision(obstacle, tRex, opt_canvasCtx) {
         return false;
     };
 
-    var checkCollision = _checkColision(tRexBox, obstacleBox, false)
+    var checkCollision = _checkCollision(tRexBox, obstacleBox, false)
     if (!checkCollision) { 
-        var checkPreCollision = _checkColision(tRexBoxPreCollision, obstacleBox, true)
+        var checkPreCollision = _checkCollision(tRexBoxPreCollision, obstacleBox, true)
         if (checkPreCollision) {
             var evtd = new Event('keydown');
             evtd.which = evtd.keyCode = 32;
